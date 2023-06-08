@@ -1,0 +1,298 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  text-decoration: underline;
+}
+
+h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  font-style: italic;
+}
+
+p {
+  margin-bottom: 10px;
+}
+
+ul {
+  margin-bottom: 10px;
+  padding-left: 20px;
+}
+
+a {
+  color: #ff0080;
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+  transition: color 0.3s ease;
+}
+
+a:before {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #ff0080;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  color: #555;
+}
+
+a:hover:before {
+  visibility: visible;
+  transform: scaleX(1);
+}
+
+header {
+    background-color: #F8F1F1;
+    padding: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px;
+}
+
+.logo h1 {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li:not(:last-child) {
+    margin-right: 20px;
+}
+
+/* About section styles */
+#about {
+    background-color: #F4E6E6;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+}
+
+.about-info {
+    width: 50%;
+}
+
+.about-image {
+    width: 50%;
+    text-align: right;
+    padding-right: 20px;
+}
+
+.about-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.social-links {
+    margin-top: 20px;
+}
+
+.social-links a:not(:last-child) {
+    margin-right: 10px;
+}
+
+/* Summary section styles */
+#summary {
+    background-color: #FDF6E7;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.summary-item {
+    margin-bottom: 40px;
+}
+
+#summary h2 {
+    color: #333;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    margin-top: 80px;
+    text-decoration: underline;
+}
+
+.summary p {
+    color: #555;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.summary ul {
+    color: #555;
+    font-size: 16px;
+    margin-left: 20px;
+}
+
+/* Experience section styles */
+#experience {
+    background-color: #E7F4F5;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.experience-item {
+    margin-bottom: 40px;
+}
+
+#experience h2 {
+    color: #333;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    margin-top: 80px;
+    text-decoration: underline;
+}
+
+.experience p {
+    color: #555;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+/* Education section styles */
+#education {
+    background-color: #EFF2E7;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.education-item {
+    margin-bottom: 40px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 24px;
+        text-decoration: underline;
+    }
+
+    h3 {
+        font-size: 20px;
+        font-style: italic;
+    }
+
+    h4 {
+        font-size: 16px;
+    }
+
+    .about-content {
+        flex-direction: column;
+    }
+
+    .about-info {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .about-image {
+        width: 100%;
+        text-align: center;
+        padding-right: 0;
+    }
+
+    .about-image img {
+        margin: 0 auto;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .social-links a:not(:last-child) {
+        margin-right: 5px;
+    }
+
+    .summary-item,
+    .experience-item,
+    .education-item {
+        margin-bottom: 20px;
+    }
+
+    header {
+        padding: 10px;
+    }
+
+    .logo h1 {
+        font-size: 20px;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .burger {
+        display: block;
+    }
+
+    .nav-links.active {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+.about-image img:hover {
+    transform: scale(1.25);
+    filter: brightness(90%);
+}
